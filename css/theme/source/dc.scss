@@ -1,0 +1,49 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$dcBlueDark: #3c4790;
+$dcBlueLight: #4a56a8;
+
+$mainColor: #222;
+$headingColor: $dcBlueDark;
+
+$mainFontSize: 24px;
+$mainFont: 'Noto Sans KR', sans-serif;
+$headingFont: 'Noto Sans KR', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+$linkColor: $dcBlueDark;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $dcBlueLight;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
